@@ -1,0 +1,29 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: border-box;
+}
+
+body {
+  background-color: cornflowerblue;
+}
+
+
+div {
+  border: 2px solid magenta;
+  background-color: cornflowerblue;
+  position: center;
+  height: 600px;
+  width: 1000px;
+  ;
+}
+  #box {
+    background-color: purple;
+    height: 100px;
+    width: 200px;
+    position: relative;
+    top: 150px;
+    left: center;
+  }
+
+

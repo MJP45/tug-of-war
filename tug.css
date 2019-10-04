@@ -5,25 +5,35 @@
 }
 
 body {
-  background-color: cornflowerblue;
+  font-family: 'Roboto Mono', monospace, Arial, Helvetica, sans-serif;
 }
 
+main { 
+  display: flex; 
+  justify-content: center;
+  align-content: center;
+  
+}
 
-div {
+.game-area {
   border: 2px solid magenta;
   background-color: cornflowerblue;
-  position: center;
   height: 600px;
   width: 1000px;
-  ;
+  text-align: center;
 }
+
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+}
+
   #box {
     background-color: purple;
     height: 100px;
     width: 200px;
-    position: relative;
+    position: absolute;
     top: 150px;
-    left: center;
   }
 
 

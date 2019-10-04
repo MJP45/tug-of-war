@@ -19,37 +19,52 @@
 
 
 // add global score for each player
-
+const player1 = document.getElementsByClassName("player-1")[0];
+const player2 = document.getElementsByClassName("player-2")[0];
 const rope = document.getElementById("box");
-let leftDistance = 400;
+let leftDistance = 450;
+let player1Score = 0;
+let player2Score = 0;
 
-const resetPosition = () => {
-	leftDistance = 400;
+
+const winnerActions = (winner) => {
+	leftDistance = 450;
 	rope.style.left = leftDistance + "px";
+	updateScore(winner);
 };
 
-
+const updateScore = (winner) => {
+	if (winner === "player 1") {		
+			player1Score++;
+			player1.innerHTML =  player1Score;
+	} else if (winner === "player 2") {
+			player2Score++;
+			player1.innerHTML =  player2Score;
+	}
+}
 
 const checkWinner = (distance) => {
 	let winner = null;
 	if (distance === 300) {
-		alert("Tugging-heck, you Won!! Well done player 1 you're great at tugging!");
+		alert("Well done player 1, you Won! you're great!");
 		winner = "player 1";
-		resetPosition();
+		winnerActions(winner);
   } else if (distance === 600) {
-		alert("Slow the tug down. Well done player 2 you're great at tugging - you won!");
-		winner = "player2";
-		resetPosition();
+		alert("Slow the tug down. Well done player 2 you're great! - you won!");
+		winner = "player 2";
+		winnerActions(winner);
 	}
 	return winner;
 }
 
+
+
 const move = (keyCode) => {
 	if (keyCode === 37) {
-		leftDistance-=20;
+		leftDistance-=10;
 		rope.style.backgroundColor = "purple";
 	} else if (keyCode === 39) {
-		leftDistance+=20;
+		leftDistance+=10;
 		rope.style.backgroundColor = "green";
 	}
 	rope.style.left = leftDistance + "px";
@@ -63,7 +78,7 @@ const onTug = (event) => {
 }
 
 document.addEventListener("keyup", onTug);
-resetPosition();
+winnerActions();
 
 
 

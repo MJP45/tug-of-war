@@ -15,9 +15,21 @@ main {
   
 }
 
+.player-title {
+  border: 2px black dotted;
+  width: 200px;
+  height: 550px;
+  background-color: white; 
+  opacity: 0.8;
+
+}
+
 .game-area {
-  border: 2px solid magenta;
-  background-color: cornflowerblue;
+  border: 2px solid black;
+  background-image: url(/assets/sea-background.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center top;
   height: 600px;
   width: 1000px;
   text-align: center;
@@ -29,11 +41,13 @@ main {
 }
 
   #box {
-    background-color: purple;
+    background-image: url(/assets/boat.png);
+    background-repeat: no-repeat;
+    background-size: contain; 
     height: 100px;
     width: 200px;
     position: absolute;
-    top: 150px;
+    top: 250px;
   }
 
 

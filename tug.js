@@ -22,7 +22,7 @@
 const player1 = document.getElementsByClassName("player-1")[0];
 const player2 = document.getElementsByClassName("player-2")[0];
 const rope = document.getElementById("box");
-let leftDistance = 450;
+let leftDistance = 150;
 let player1Score = 0;
 let player2Score = 0;
 
@@ -62,10 +62,9 @@ const checkWinner = (distance) => {
 const move = (keyCode) => {
 	if (keyCode === 37) {
 		leftDistance-=10;
-		rope.style.backgroundColor = "purple";
 	} else if (keyCode === 39) {
 		leftDistance+=10;
-		rope.style.backgroundColor = "green";
+		// rope.style.backgroundColor = "green";
 	}
 	rope.style.left = leftDistance + "px";
 	return leftDistance;

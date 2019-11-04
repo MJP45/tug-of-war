@@ -22,7 +22,7 @@
 const player1 = document.getElementsByClassName("player-1")[0];
 const player2 = document.getElementsByClassName("player-2")[0];
 const rope = document.getElementById("box");
-let leftDistance = 150;
+let leftDistance = 250;
 let player1Score = 0;
 let player2Score = 0;
 
@@ -39,7 +39,7 @@ const updateScore = (winner) => {
 			player1.innerHTML =  player1Score;
 	} else if (winner === "player 2") {
 			player2Score++;
-			player1.innerHTML =  player2Score;
+			player2.innerHTML =  player2Score;
 	}
 }
 
@@ -64,7 +64,6 @@ const move = (keyCode) => {
 		leftDistance-=10;
 	} else if (keyCode === 39) {
 		leftDistance+=10;
-		// rope.style.backgroundColor = "green";
 	}
 	rope.style.left = leftDistance + "px";
 	return leftDistance;

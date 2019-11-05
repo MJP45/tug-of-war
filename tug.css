@@ -26,7 +26,7 @@ main {
 
 .game-area {
   border: 2px solid black;
-  background-image: url(/assets/sea-background.gif);
+  background-image: url(assets/sea-background.gif);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center top;
@@ -41,7 +41,7 @@ main {
 }
 
   #box {
-    background-image: url(/assets/boat.png);
+    background-image: url(assets/boat.png);
     background-repeat: no-repeat;
     background-size: contain; 
     height: 100px;
